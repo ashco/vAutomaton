@@ -8,6 +8,8 @@ const app = express();
 // Controllers
 app.use('/api', require('./routes/api'));
 
+app.use(bodyParser.json());
+
 // Server static assets if in production
 // if (process.env.NODE_ENV === 'production') {
 // Set static folder

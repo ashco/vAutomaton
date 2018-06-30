@@ -4,7 +4,7 @@ const router = express.Router();
 
 // GET Route - /api/provision
 router.get('/provision', (req, res) => {
-  res.send('Provision route hit!');
+  console.log('Provision route hit!');
 });
 
 module.exports = router;

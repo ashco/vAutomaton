@@ -1,0 +1,26 @@
+.App {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas:
+    'NavBar  NavBar'
+    'Menubar Main';
+  height: 100vh;
+}
+
+.NavBar {
+  grid-area: NavBar;
+}
+
+.Menubar {
+  grid-area: Menubar;
+}
+
+.Main {
+  grid-area: Main;
+}
+
+@media (min-width: 1000px) {
+  .App {
+  }
+}

@@ -4,13 +4,17 @@ import styled from 'styled-components';
 
 export class NavBar extends Component {
   render() {
-    // const { titleText } = this.props;
+    const { handleMenu } = this.props;
 
     return (
       <Nav className="NavBar">
         <Media query={{ maxWidth: 999 }}>
           {matches => {
-            return matches ? <NavMobile /> : <NavDesktop />;
+            return matches ? (
+              <NavMobile handleMenu={handleMenu} />
+            ) : (
+              <NavDesktop />
+            );
           }}
         </Media>
       </Nav>
@@ -20,9 +24,11 @@ export class NavBar extends Component {
 
 class NavMobile extends Component {
   render() {
+    const { handleMenu } = this.props;
+
     return (
       <div>
-        <button>Toggle</button>
+        <button onClick={handleMenu}>Toggle</button>
         MOBILE
       </div>
     );
